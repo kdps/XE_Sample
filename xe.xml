@@ -1,0 +1,914 @@
+<?xml version="1.0" ?>
+<root>
+
+<!--
+Addon
+-->
+
+  <obj name="addon" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+  </obj>
+  <obj name="addonAdminModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">getAddonInfoXml ($addon,$site_srl = 0,$gtype = 'site')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAddonList	($site_srl = 0,$gtype = 'site')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAddonListForSuperAdmin ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAddonPath	($addon_name)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInsertedAddons ($site_srl = 0,$gtype = 'site')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isActivatedAddon	($addon,$site_srl = 0,$type = "pc",$gtype = 'site')</item>
+  </obj>
+  <obj name="addonAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAddonAdminIndex ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAddonAdminInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAddonAdminSetup ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="addonController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_getMidList ($selected_addon,$site_srl = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">doSetup ($addon,$extra_vars,$site_srl = 0,$gtype = 'site')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCacheFilePath	($type = "pc")</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init	()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">makeCacheFile ($site_srl = 0,$type = "pc",$gtype = 'site')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeAddonConfig ($site_srl)</item>
+  </obj>
+
+<!--
+Admin
+-->
+
+  <obj name="admin" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_getGnbKey ($menuName)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_getOldGnbKey ($menuName)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkAdminMenu ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">createXeAdminMenu ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAdminMenuName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+  </obj>
+  <obj name="adminAdminController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteAllFavorite ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteFavorite ($favoriteSrl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_insertFavorite ($siteSrl,$module,$type = 'module')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">cleanFavorite ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">makeDefaultDesignFile ($designInfo,$site_srl = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminDeleteLogo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminEnviromentGatheringAgreement ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminInsertDefaultDesignInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminLogout ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminMenuReset ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminRecompileCacheFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminRemoveIcons ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminToggleFavorite ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminUpdateConfig ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminUpdateEmbedWhitelist ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procAdminUpdateSitelock ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateDefaultDesignInfo ($vars)</item>
+  </obj>
+  <obj name="adminAdminModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">getAdminFTPList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAdminFTPPath ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAdminMenuLang ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAllSitesThatHaveModules ($domain = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getEnv ($type = 'WORKING')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFaviconUrl</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFavoriteList ($siteSrl = 0,$isGetModuleInfo = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFTPPath ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getMobileIconUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getModulesSkinList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSFTPList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSFTPPath ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSiteAllList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSiteCountByDate ($date = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getThemeInfo	($theme_name,$layout_list = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getThemeList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">iconUrlCheck	($iconname,$default_icon_name)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExistsFavorite ($siteSrl,$module)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$gnbLangBuffer</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$pwd</item>
+  </obj>
+  <obj name="adminAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_markingCheckEasyinstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkEasyinstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAdminConfigFtp ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAdminConfigGeneral ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAdminIndex ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAdminSetup ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispAdminViewServerEnv ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">makeGnbUrl ($module = 'admin')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">showSendEnv ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$easyinstallCheckFile = './files/env/easyinstall_last'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$layout_list</item>
+  </obj>
+
+<!--
+Adminlogging
+-->
+
+  <obj name="adminlogging" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+  </obj>
+  <obj name="adminloggingController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertLog ($module,$act)</item>
+  </obj>
+
+<!--
+Board
+-->
+
+  <obj name="board" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUninstall</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$category_list = NULL</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$list_count = 20</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$order_target = array('list_order', 'update_order', 'regdate', 'voted_count', 'blamed_count', 'readed_count', 'comment_count', 'title')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$page_count = 10</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$search_option = array('title','content','title_content','comment','user_name','nick_name','user_id','tag')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$skin = "default"</item>
+  </obj>
+  <obj name="boardAdminController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">init</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardAdminDeleteBoard</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardAdminInsertBoard ($args = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardAdminSaveCategorySettings</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardAdminUpdateBoardFroBasic</item>
+  </obj>
+  <obj name="boardAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">alertMessage	($message)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminBoardAdditionSetup ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminBoardInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminCategoryInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminContent ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminDeleteBoard ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminExtraVars ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminGrantInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminInsertBoard ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminMobileSkinInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardAdminSkinInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="boardAPI" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">arrangeComment ($comment_list)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">arrangeContent ($content)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">arrangeContentList ($content_list)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">arrangeExtraVars	($list)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">arrangeFile ($file_list)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardCatogoryList ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentCommentList ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentFileList ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentList ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentView ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardNoticeList ($oModule)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardTagList ($oModule)</item>
+  </obj>
+  <obj name="boardController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">init</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardDeleteComment</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardDeleteDocument</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardDeleteTrackback</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardInsertComment</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardInsertDocument</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardVerificationPassword</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procBoardVoteDocument</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerMemberMenu ($obj)</item>
+  </obj>
+  <obj name="boardController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardCategory ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardMessage	($msg_code)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getBoardCommentPage ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="boardModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">getDefaultListConfig	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getListConfig ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerModuleListInSitemap ($obj)</item>
+  </obj>
+  <obj name="boardView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_getStatusNameList ($oDocumentModel)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_makeListColumnList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">alertMessage	($message)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardCategoryList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContent ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentCommentList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentFileList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardContentView ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardDelete ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardDeleteComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardDeleteTrackback ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardMessage	($msg_code)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardModifyComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardNoticeList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardReplyComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardTagList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardWrite ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispBoardWriteComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$columnList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$listConfig</item>
+  </obj>
+  <obj name="boardWAP" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">procWAP ($oMobile)</item>
+  </obj>
+
+<!--
+Cache
+-->
+
+  <obj name="CacheApc" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_delete ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">CacheApc ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">delete ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInstance ($opt = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSupport ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isValid ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">put ($key,$buff,$valid_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">truncate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$isSupport = false</item>
+  </obj>
+  <obj name="CacheBase" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSupport</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isValid ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">put ($key,$buff,$valid_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">truncate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$valid_time = 36000</item>
+  </obj>
+  <obj name="CacheHandler" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">CacheHandler	($target,$info = null,$always_use_file = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">delete ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCacheKey ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getGroupKey ($keyGroupName,$key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInstance ($target = 'object',$info = null,$always_use_file = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">invalidateGroupKey ($keyGroupName)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSupport ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isValid ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">put ($key,$buff,$valid_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">truncate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$handler = null</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$keyGroupVersions = null</item>
+  </obj>
+  <obj name="CacheFile" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_delete ($_key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">CacheFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">delete ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCacheFileName	($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInstance ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSupport ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isValid ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">put ($key,$buff,$valid_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">truncate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$cache_dir = 'files/cache/store/'</item>
+  </obj>
+  <obj name="CacheHandler" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">CacheHandler	($target,$info = null,$always_use_file = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">delete ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCacheKey ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getGroupKey ($keyGroupName,$key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInstance ($target = 'object',$info = null,$always_use_file = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">invalidateGroupKey ($keyGroupName)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSupport ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isValid ($key,$modified_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">put ($key,$buff,$valid_time = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">truncate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$handler = null</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$keyGroupVersions = null</item>
+  </obj>
+
+<!--
+ClickCountExpression
+-->
+
+  <obj name="ClickCountExpression" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">ClickCountExpression	($column_name,$alias = NULL,$click_count = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExpression</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">show</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$click_count</item>
+  </obj>
+
+<!--
+ColumTag
+-->
+
+  <obj name="ColumnTag" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">ColumnTag ($name)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$name</item>
+  </obj>
+
+<!--
+Comment
+-->
+
+  <obj name="comment" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+  </obj>
+  <obj name="commentAdminController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_moveCommentToTrash ($commentSrlList,$oCommentController,$oDB,$message_content = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteModuleComments	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">emptyTrash ($originObject)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init	()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminAddCart</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminCancelDeclare</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminChangePublishedStatusChecked</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminChangeStatus</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminDeleteChecked</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentAdminMoveToTrash</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">restoreTrash	($originObject)</item>
+  </obj>
+  <obj name="commentAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispCommentAdminDeclared ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispCommentAdminList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="commentController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteDeclaredComments ($commentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteVotedComments	($commentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addCommentPopupMenu ($url,$str,$icon = '',$target = 'self')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addGrant	($comment_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">declaredComment ($comment_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteComment ($comment_srl,$is_admin = FALSE,$isMoveToTrash = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteCommentLog</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteComments ($document_srl,$obj = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertComment ($obj,$manual_inserted = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isModuleUsingPublishValidation ($module_srl = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentDeclare</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentGetList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentInsertModuleConfig</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentVoteDown</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procCommentVoteUp</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">sendEmailToAdminAfterInsertComment ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setCommentModuleConfig ($srl,$comment_config)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCopyModule ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDeleteDocumentComments ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDeleteModuleComments ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateComment ($obj,$is_admin = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateVotedCount	($comment_srl,$point = 1)</item>
+  </obj>
+  <obj name="commentItem" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_loadFromDB ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">commentItem ($comment_srl = 0,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getContent ($add_popup_menu = TRUE,$add_content_info = TRUE,$add_xe_content_class = TRUE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getContentText ($strlen = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getEditor ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHomepageUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getIpAddress ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getMemberSrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getNickName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getPermanentUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getProfileImage ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdate ($format = 'Y.m.d H:i:s') ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdateGM ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdateTime ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSignature ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSummary ($str_size = 50,$tail = '...') ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getThumbnail	($width = 80,$height = 0,$thumbnail_type = '') ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdate ($format = 'Y.m.d H:i:s') ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdateGM ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdateTime ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUploadedFiles ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUserID ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUserName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">hasUploadedFiles ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isAccessible ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isCarted ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isEditable ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExists ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExistsHomepage ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isGranted ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSecret ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">notify ($type,$content)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setAccessible</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setAttribute	($attribute)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setComment ($comment_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setGrant ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">thumbnailExists ($width = 80,$height = 0,$type = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">useNotify ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$columnList = array()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$comment_srl = 0</item>
+  </obj>
+  <obj name="commentModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_arrangeComment ($comment_list,$list,$depth,$parent = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">fixCommentList ($module_srl,$document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getChildCommentCount ($comment_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getChildComments	($comment_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getComment ($comment_srl = 0,$is_admin = FALSE,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentAllCount ($module_srl,$published = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentConfig ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentCount ($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentCountByDate ($date = '',$moduleSrlList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentCountByMemberSrl ($member_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentList ($document_srl,$page = 0,$is_admin = FALSE,$count = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentListByMemberSrl ($member_srl,$columnList = array(),$page = 0,$is_admin = FALSE,$count = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentMenu ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getComments ($comment_srl_list,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentVotedMemberList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDistinctModules</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getNewestCommentList	($obj,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSecretNameList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTotalCommentCount	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTotalCommentList ($obj,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isGranted ($comment_srl)</item>
+  </obj>
+  <obj name="commentView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDispCommentAdditionSetup ($obj)</item>
+  </obj>
+
+<!--
+Document
+-->
+
+  <obj name="document" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getConfigStatus ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDefaultStatus ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getStatusList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$search_option = array('title','content','title_content','user_name',)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$statusList = array('private'=>'PRIVATE', 'public'=>'PUBLIC', 'secret'=>'SECRET', 'temp'=>'TEMP')</item>
+  </obj>
+  <obj name="documentAdminController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">copyDocumentModule ($document_srl_list,$module_srl,$category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteModuleDocument	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteThumbnailFile ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">emptyTrash ($originObject)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveDocumentModule ($document_srl_list,$module_srl,$category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminCancelDeclare</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminDeleteAlias</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminDeleteAllThumbnail</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminDeleteChecked</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminDeleteExtraVar</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminInsertAlias</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminInsertConfig</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminInsertExtraVar</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminMoveExtraVar</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminMoveToTrash</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAdminRestoreTrash</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">restoreTrash	($originObject)</item>
+  </obj>
+  <obj name="documentAdminModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCountByDate ($date = '',$moduleSrlList = array(),$statusList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentTrash	($trash_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentTrashList	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="documentAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentAdminAlias</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentAdminConfig</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentAdminDeclared</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentAdminList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentAdminTrashList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="documentController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_checkCommentStatusForOldVersion	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_checkDocumentStatusForOldVersion ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteDeclaredDocuments	($documentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteDocumentReadedLog	($documentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_deleteDocumentVotedLog ($documentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addDocumentPopupMenu	($url,$str,$icon = '',$target = 'self')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addGrant ($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addXmlJsFilter ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">declaredDocument	($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteCategory ($category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocument ($document_srl,$is_admin = false,$isEmptyTrash = false,$oDocument = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocumentAliasByDocument ($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocumentAliasByModule ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocumentExtraKeys ($module_srl,$var_idx = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocumentExtraVars ($module_srl,$document_srl = null,$var_idx = null,$lang_code = null,$eid = null )</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteDocumentHistory ($history_srl,$document_srl,$module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteModuleCategory	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getPhpCacheCode ($source_node,$tree,$site_srl,$php_header_buff)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getXmlTree ($source_node,$tree,$site_srl,$xml_header_buff)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertAlias ($module_srl,$document_srl,$alias_title)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertCategory ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertDocument ($obj,$manual_inserted = false,$isRestore = false,$isLatest = true)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertDocumentExtraKey ($module_srl,$var_idx,$var_name,$var_type,$var_is_required = 'N',$var_search = 'N',$var_default = '',$var_desc = '',$eid)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertDocumentExtraVar ($module_srl,$document_srl,$var_idx,$value,$eid = null,$lang_code = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">makeCategoryFile	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveCategoryDown	($category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveCategoryUp ($category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveDocumentToTrash ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentAddCart ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentDeclare ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentDeleteCategory ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentGetList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentInsertCategory ($args = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentInsertModuleConfig ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentMakeXmlFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentManageCheckedDocument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentMoveCategory ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentTempSave ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentVoteDown ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procDocumentVoteUp ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCopyModule ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCopyModuleExtraKeys	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDeleteModuleDocuments	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateCategory ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateCategoryCount ($module_srl,$category_srl,$document_count = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateCategoryListOrder ($module_srl,$list_order)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateCommentCount ($document_srl,$comment_count,$last_updater,$comment_inserted = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateDocument ($source_obj,$obj,$manual_updated = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateReadedCount ($oDocument)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateTrackbackCount	($document_srl,$trackback_count)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateUploaedCount ($documentSrlList)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateVotedCount	($document_srl,$point = 1)</item>
+  </obj>
+  <obj name="documentItem" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_addAllowScriptAccess ($m)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_checkAccessibleFromStatus ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_checkAllowScriptAccess ($m)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_loadFromDB ($load_extra_vars = true)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addCart ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">allowComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">allowTrackback ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">doCart ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">documentItem	($document_srl = 0,$load_extra_vars = true,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getBrowserTitle ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentCount ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCommentEditor ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getComments ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getContent ($add_popup_menu = true,$add_content_info = true,$resource_realpath = false,$add_xe_content_class = true,$stripEmbedTagException = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getContentText ($strlen = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentAlias ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentMid ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentType ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getEditor ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraEidValue	($eid)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraEidValueHTML	($eid)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraImages ($time_interval = 43200)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraValue ($idx)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraValueHTML ($idx)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraVars	()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraVarsValue ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHomepageUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getIpAddress ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getLangCode ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getLastUpdater ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getMemberSrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getModuleName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getNickName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getPermanentUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getProfileImage ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdate ($format = 'Y.m.d H:i:s')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdateDT ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdateGM ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRegdateTime ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSignature ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getStatus ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSummary ($str_size = 50,$tail = '...')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getThumbnail	($width = 80,$height = 0,$thumbnail_type = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTitle	($cut_size = 0,$tail = '...')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTitleText ($cut_size = 0,$tail = '...')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTrackbackCount ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTrackbacks ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTrackbackUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTransContent ($add_popup_menu = true,$add_content_info = true,$resource_realpath = false,$add_xe_content_class = true)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTranslationLangCodes ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdate ($format = 'Y.m.d H:i:s')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdateDT ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdateGM ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUpdateTime ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUploadedFiles	($sortIndex = 'file_srl')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUserID ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUserName ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">hasUploadedFiles ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isAccessible ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isCarted ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isEditable ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isEnableComment ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExists ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExistsHomepage ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExtraVarsExists ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isGranted ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isLocked ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isNotice ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isSecret ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">notify ($type,$content)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">printExtraImages ($time_check = 43200)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeCart ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">replaceResourceRealPath ($matches)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setAttribute ($attribute,$load_extra_vars = true)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setDocument ($document_srl,$load_extra_vars = true)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setGrant ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">thumbnailExists ($width = 80,$height = 0,$type = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">updateReadedCount ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">useNotify ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$allow_trackback_status = null</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$allowscriptaccessKey = 0</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$allowscriptaccessList = array()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$columnList = array()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$document_srl = 0</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$lang_code = null</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">$uploadedFiles = array()</item>
+  </obj>
+  <obj name="documentModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_arrangeCategory	($document_category,$list,$depth)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setSearchOption	($searchOpt,$args,$query_id,$use_division)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setSortIndex ($obj,$load_extra_vars)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAlias	($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategory ($category_srl,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryChlidCount ($category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryDocumentCount	($module_srl,$category_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryHTML ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryList ($module_srl,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryPhpFile ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCategoryXmlFile ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDailyArchivedList	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocument ($document_srl = 0,$is_admin = false,$load_extra_vars = true,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCategories ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCategoryTplInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentConfig ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCount	($module_srl,$search_obj = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCountByGroupStatus ($search_obj = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentCountByMemberSrl ($member_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentExtraVarsCount ($module_srl,$search_obj = NULL)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentExtraVarsFromDB ($documentSrls)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentList ($obj,$except_notice = false,$load_extra_vars = true,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentListByMemberSrl ($member_srl,$columnList = array(),$page = 0,$is_admin = FALSE,$count = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentMenu ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentPage ($oDocument,$opt)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocuments	($document_srls,$is_admin = false,$load_extra_vars = true,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentSrlByAlias ($mid,$alias)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentSrlByTitle ($module_srl,$title)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDocumentVotedMemberList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraKeys	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraVars	($module_srl,$document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getExtraVarsHTML	($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHistories	($document_srl,$list_count,$page)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHistory ($history_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getMonthlyArchivedList ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getNoticeList ($obj,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getStatusNameList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getTrashList ($obj)	</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isGranted ($document_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setToAllDocumentExtraVars ()</item>
+  </obj>
+  <obj name="documentView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentManageDocument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentPreview ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispDocumentPrint ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispTempSavedList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDispDocumentAdditionSetup	($obj)</item>
+  </obj>
+  
+<!--
+File
+-->
+
+  <obj name="file" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">checkUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleInstall ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moduleUpdate ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">recompileCache ()</item>
+  </obj>
+  <obj name="fileAdminController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_changeBytes	($size_str)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteModuleFiles ($module_srl)	</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileAdminAddCart</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileAdminDeleteChecked</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileAdminInsertConfig</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileAdminInsertModuleConfig</item>
+  </obj>
+  <obj name="fileAdminModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">_makeSearchParam	($obj,$args)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFileList ($obj,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFilesCountByDate ($date = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFilesCountByGroupValid ($obj = '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="fileAdminView" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">dispFileAdminConfig ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">dispFileAdminList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="fileController" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteFile ($file_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">deleteFiles ($upload_target_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">insertFile ($file_info,$module_srl,$upload_target_srl,$download_count = 0,$manual_insert = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveFile	($source_srl,$target_module_srl,$target_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">printUploadedFileList ($editor_sequence,$upload_target_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileDelete</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileDownload</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileGetList</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileIframeUpload</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileImageResize</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileOutput</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">procFileUpload</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setFilesValid ($upload_target_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setUploadInfo ($editor_sequence,$upload_target_srl = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerAttachFiles ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCheckAttached	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCommentAttachFiles ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCommentCheckAttached ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCommentDeleteAttached	($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerCopyModule ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDeleteAttached ($obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">triggerDeleteModuleFiles ($obj)</item>
+  </obj>
+  <obj name="fileModel" trigger=">">
+	<item name="constructor" obj="Object" trigger="." img="properties">getDownloadUrl ($file_srl,$sid,$module_srl = "")</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFile ($file_srl,$columnList = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFileConfig ($module_srl = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFileGrant	($file_info,$member_info)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFileList ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFileModuleConfig ($module_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFiles	($upload_target_srl,$columnList = array(),$sortIndex = 'file_srl',$ckValid = false)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFilesCount ($upload_target_srl)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUploadConfig ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUploadStatus ($attached_size = 0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+  </obj>
+  <obj name="FileHandler:" trigger=":">
+	<item name="constructor" obj="Object" trigger="." img="properties">_makeIniBuff	($arr)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkMemoryLoadImage	($imageInfo)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">copyDir ($source_dir,$target_dir,$filter = null,$type = null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">copyFile	($source,$target,$force = 'Y')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">createImageFile ($source_file,$target_file,$resize_width = 0,$resize_height = 0,$target_type = '',$thumbnail_type = 'crop')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">exists ($filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">filesize	($size)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRealPath ($source)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRemoteFile ($url,$target_filename,$body = null,$timeout = 3,$method = 'GET',$content_type = null,$headers = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRemoteResource ($url,$body = null,$timeout = 3,$method = 'GET',$content_type = null,$headers = array(),$cookies = array(),$post_data = array())</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">hasContent ($filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isDir ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">makeDir ($path_string)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveDir ($source_dir,$target_dir)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">moveFile	($source,$target)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">openFile	($filename,$mode)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">readDir ($path,$filter = '',$to_lower = FALSE,$concat_prefix = FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">readFile ($filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">readIniFile ($filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeBlankDir ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeDir ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeFile ($filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">removeFilesInDir	($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">rename ($source,$target)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">returnBytes ($val)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">writeFile ($filename,$buff,$mode = "w")</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">writeIniFile	($filename,$arr)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties"></item>
+	<item name="constructor" obj="Object" trigger="." img="properties"></item>
+	<item name="constructor" obj="Object" trigger="." img="properties"></item>
+  </obj>
+<!--
+getController
+-->
+
+  <obj name="getModel" trigger="(">
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="댓글">'comment'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="모듈">'module'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="멤버">'member'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="문서">'document'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="스팸필터">'spamfilter'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="포인트">'point'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="커뮤니케이션">'communication'</item>
+  </obj>
+  <obj name="getController" trigger="(">
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="댓글">'comment'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="모듈">'module'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="멤버">'member'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="문서">'document'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="스팸필터">'spamfilter'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="포인트">'point'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="커뮤니케이션">'communication'</item>
+  </obj>
+  
+<!--
+Context::
+-->
+
+  <obj name="Context::get" trigger="(">
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="행동(Action)">'act'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="모듈">'module'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="로그인 정보">'logged_info'</item>
+	<item name="constructor" obj="Object" trigger="." img="properties" tooltip="문서 목록">'document_list'</item>
+  </obj>
+  <obj name="Context:" trigger=":">
+	<item name="constructor" obj="Object" trigger="." img="properties">set</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getInstance ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">Context ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">init ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">close ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadDBInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDBType ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setDBInfo ($db_info)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDBInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSslStatus ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getDefaultUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadLangSupported ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadLangSelected ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkSSO ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isFTPRegisted ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFTPInfo ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addBrowserTitle ($site_title)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setBrowserTitle ($site_title)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getBrowserTitle ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSiteTitle ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_getBrowserTitle ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadLang ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_evalxmlLang ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_loadXmlLang ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_loadPhpLang ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setLangType ($lang_type= 'ko')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getLangType ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getLang ($code)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setLang ($code, $val)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">convertEncoding ($source_obj)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">checkConvertFlag ($val, $key=null, $charset=null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">doConvertEncoding $val, $key=null, $charset)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">convertEncodingStr ($str)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setResponseMethod ($method= 'HTML')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getResponseMethod ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">setRequestMethod ($type= '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_checkGlobalVars ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setRequestArgument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_recursiveCheckVar ($val)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setJSONRequestArgument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setXmlRpcArgument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_filterRequestVar ($key, $val, $do_stripslashes=1)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isUploaded ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_setUploadedArgument ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRequestMethod ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRequestUrl ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getJSCallbackFunc ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getUrl ($num_args=0, $args_list=array(), $domain=null, $encode=TRUE, $autoEncode=FALSE)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRequestUri ($ssl_mode=FOLLOW_REQUEST_SSL, $domain=null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">set ($key, $val, $set_to_get_vars=0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">get ($key)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">gets ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAll ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getRequestVars ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addSSLAction ($action)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addSSLActions ($action_array)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">subtractSSLAction ($action)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getSSLActions ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isExistsSSLAction ($action)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">normalizeFilePath ($file)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getAbsFileUrl ($file)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadFile ($args)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadFile ($file, $targetIe= '', $media= 'all')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadAllFiles ($type= 'all')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addJsFile ($file, $optimized=FALSE, $targetie= '', $index=0, $type= 'head', $isRuleset=FALSE, $autoPath=null)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadJsFile ($file, $optimized=FALSE, $targetie= '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadAllJsFiles ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addJsFilter ($path, $filename)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">_getUniqueFileList ($files)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getJsFile ($type= 'head')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addCSSFile ($file, $optimized=FALSE, $media= 'all', $targetie= '', $index=0)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadCSSFile ($file, $optimized=FALSE, $media= 'all', $targetie= '')</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">unloadAllCSSFiles ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getCSSFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getJavascriptPluginInfo ($pluginName)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">loadJavascriptPlugin ($plugin_name)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addHtmlHeader ($header)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">clearHtmlHeader ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHtmlHeader ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addBodyClass ($class_name)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getBodyClass ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addBodyHeader ($header)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getBodyHeader ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addHtmlFooter ($footer)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getHtmlFooter ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getConfigFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getFTPConfigFile ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isInstalled ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">transContent ($content)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">isAllowRewrite ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">pathToUrl ($path)</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">getMetaTag ()</item>
+	<item name="constructor" obj="Object" trigger="." img="properties">addMetaTag ($name, $content, $is_http_equiv=FALSE)</item>
+  </obj>
+  
+</root>
